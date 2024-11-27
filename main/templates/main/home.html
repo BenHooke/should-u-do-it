@@ -1,0 +1,71 @@
+{% load static %}
+{% load filters %}
+{% load custom_filters %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type='text/css' href="{% static 'css/styles.css' %}">
+  <title>Should U Do It</title>
+</head>
+<body>
+  <div class="contents">
+    <div class="contents">
+      <h2 class="title"><a class="title" href="/">Should U do it?</a></h2>
+      <p class="slogan">YES, you definitely should use this tool to make decisions of your daily life!</p>
+    </div>
+    <div class="ask">
+      <form method="POST" action="{% url 'ask_question' %}">
+        {% csrf_token %}
+        <input class="askbar" type="text" maxlength="50" name="question_text" placeholder="Your question" onfocus="this.placeholder=''"onblur="this.placeholder='Your question'">
+        <button class="askbutton" type="submit">Ask</button>
+      </form>
+    </div>
+    <div class="listbody">
+      <ul class="list">
+        {% for question in questions %}
+        <li class="listitem">
+          <span class="listid{% cycle 'dark' 'light' %}">{{question.id}}</span>
+          <span class="listtime" style="background-color: {{ question.color }};">{{question.timestamp|date:"H:i:s"}}</span>
+          <span class="listip" style="background-color: hsl({{question.ip_address|last_octet}}, 70%, 50%);">{{question.ip_address|last_six_ip}}</span>
+          <a class="listquestion{% cycle 'dark' 'light' %}">{{question.text}}</a>
+          <p class="listanswer" style="background-color: {% if question.answer == 'no' %}#FF9999  {% else %}#99FF99{% endif %};">{{question.answer}}</p>
+        </li>
+        {% empty %}
+        <p>No questions yet! Be the first to ask.</p>
+        {% endfor %}
+        
+        <div class="foot">
+        <div>
+          {% if questions.has_previous %}
+            <span class="pagination">
+              {% if questions.previous_page_number == 1%}
+                <a href="?page={{ questions.previous_page_number }}">&laquo; homepage</a>
+              {% else %}
+                <a href="?page={{ questions.previous_page_number }}">&laquo; page {{ questions.previous_page_number}}</a>
+              {% endif %}
+            {% endif %}
+          </div>
+          {% if questions.has_next %}
+            <div class="pagination">
+              <a href="?page={{ questions.next_page_number }}">page {{ questions.next_page_number}} &raquo;</a>
+            </div>
+            {% endif %}
+        </div>
+
+      </ul>
+      <div class="sidebar">
+        <p>Disclaimer</p>
+        <p>Should U do it is intended for entertainment purposes only. Please refrain from using it for serious or personal matters. If you or someone you know is experiencing a mental health crisis or contemplating suicide, it is crucial to seek professional help immediately.</p>
+        <p><strong>Crisis Text Line</strong></p>
+        <p>Text HOME to 741741</p>
+        <hr>
+        <p>This website is a throwback to www.shouldidoit.com which shut down years ago. This is not my original creation, I tried to remake it as close to the original as I could for nostalgia's sake.</p>
+        <p>All references used were available thanks to archive.org and their Wayback Machine. Intenet preservation is the preservation of history.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
