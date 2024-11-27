@@ -1,1 +1,1 @@
-web: gunicorn shouldu --log-file -
+web: gunicorn shouldu.wsgi:application
