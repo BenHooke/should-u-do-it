@@ -208,23 +208,6 @@ a:hover {
   text-decoration: underline; 
 }
 
-/* .pagination {
-  margin-top: 20px;
-  text-align: center
-}
-
-.pagination a {
-  padding: 10px 15px;
-  margin: 0 5px;
-  background-color: #E0E0E0;
-  color: #333;
-  text-decoration: none;
-}
-
-.pagination a:hover {
-  text-decoration: underline;
-} */
-
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -235,4 +218,121 @@ a:hover {
   color: white;
   font-size: 13px;
   width: 168px;
+}
+
+@media (max-width:480px) {
+  .title {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  .slogan {
+    width: 400px;
+    font-size: 10px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .contents {
+    width: 400px;
+    height: 47px;
+  }
+
+  .ask {
+    width: 400px;
+    height: 32px;
+    margin: 0;
+  }
+
+  .askbar {
+    height: 19px;
+    font-size: 10px;
+    width: 200px;
+    margin: 2px;
+    padding: 2px;
+    position: relative;
+    top: -4px;
+    margin-left: 4px;
+  }
+
+  ::placeholder {
+    font-size: 10px;
+  }
+
+  .askbutton {
+    height: 24px;
+    margin: 0;
+    position: relative;
+    top: -2px;
+    font-size: 10px;
+    width: 35px;
+    padding-top: 2px;
+  }
+
+  .list {
+    width: auto;
+  }
+
+  .listbody {
+    margin-top: 4px;
+    width: 400px;
+  }
+
+  .listitem {
+    width: 315px;
+    height: 20px;
+  }
+
+  .listiddark {
+    width: 30px;
+    font-size: 7px;
+  }
+
+  .listidlight {
+    width: 30px;
+    font-size: 7px;
+  }
+
+  .listtime {
+    width: 35px;
+    font-size: 7px;
+  }
+
+  .listip {
+    width: 35px;
+    font-size: 7px;
+  }
+
+  .listquestiondark {
+    width: 190px;
+    font-size: 10px;
+  }
+  
+  .listquestionlight {
+    width: 190px;
+    font-size: 10px;
+  }
+
+  .listanswer {
+    width: 27px;
+    font-size: 10px;
+  }
+  
+  .foot {
+    height: 30px;
+    width: 315px;
+  }
+
+  .pagination {
+    height: 12px;
+    font-size: 10px;
+    padding: 2px;
+    margin: 2px;
+  }
+
+  .sidebar {
+    font-size: 7.1px;
+    padding-left: 1px;
+  }
 }
