@@ -258,14 +258,14 @@ a:hover {
 
   .ask {
     width: 330px;
-    height: 23px;
+    height: 25px;
     margin: 0;
     border: none
   }
 
   .askbar {
     height: 12px;
-    font-size: 10px;
+    font-size: 8px;
     width: 173px;
     margin: 2px;
     padding: 2px;
@@ -280,8 +280,11 @@ a:hover {
     height: 18px;
     margin: 0;
     font-size: 8px;
-    width: 28px;
+    width: 26px;
     padding-top: 2px;
+    padding-right: 3px;
+    margin-left: -1px;
+    align-items: center;
   }
 
   .list {
