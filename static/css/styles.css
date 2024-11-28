@@ -222,51 +222,52 @@ a:hover {
 
 @media (max-width:480px) {
   .title {
-    font-size: 15px;
+    font-size: 12px;
     letter-spacing: 1px;
   }
 
   .slogan {
     width: 400px;
-    font-size: 10px;
+    font-size: 8px;
     letter-spacing: 0.2px;
     text-align: center;
     margin-bottom: 10px;
   }
 
   .contents {
-    width: 400px;
-    height: 47px;
+    width: 300px;
+    height: 38px;
   }
 
   .ask {
-    width: 400px;
-    height: 32px;
+    width: 330px;
+    height: 23px;
     margin: 0;
+    border: none
   }
 
   .askbar {
-    height: 19px;
+    height: 12px;
     font-size: 10px;
-    width: 200px;
+    width: 173px;
     margin: 2px;
     padding: 2px;
     position: relative;
-    top: -4px;
+    top: -7px;
     margin-left: 4px;
   }
 
   ::placeholder {
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .askbutton {
-    height: 24px;
+    height: 18px;
     margin: 0;
     position: relative;
-    top: -2px;
-    font-size: 10px;
-    width: 35px;
+    top: -6px;
+    font-size: 8px;
+    width: 28px;
     padding-top: 2px;
   }
 
@@ -276,63 +277,63 @@ a:hover {
 
   .listbody {
     margin-top: 4px;
-    width: 400px;
+    width: 330px;
   }
 
   .listitem {
-    width: 315px;
-    height: 20px;
+    width: 250px;
+    height: 15px;
   }
 
   .listiddark {
     width: 30px;
-    font-size: 7px;
+    font-size: 5px;
   }
 
   .listidlight {
     width: 30px;
-    font-size: 7px;
+    font-size: 5px;
   }
 
   .listtime {
     width: 35px;
-    font-size: 7px;
+    font-size: 5px;
   }
 
   .listip {
     width: 35px;
-    font-size: 7px;
+    font-size: 5px;
   }
 
   .listquestiondark {
     width: 190px;
-    font-size: 10px;
+    font-size: 8px;
   }
   
   .listquestionlight {
     width: 190px;
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .listanswer {
     width: 27px;
-    font-size: 10px;
+    font-size: 8px;
   }
   
   .foot {
-    height: 30px;
-    width: 315px;
+    height: 23px;
+    width: 250px;
   }
 
   .pagination {
-    height: 12px;
-    font-size: 10px;
+    height: 9px;
+    font-size: 8px;
     padding: 2px;
     margin: 2px;
   }
 
   .sidebar {
-    font-size: 7.1px;
+    font-size: 6.1px;
     padding-left: 1px;
   }
 }
